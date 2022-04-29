@@ -1,0 +1,17 @@
+.banner-container{
+    background-image: url("https://i.ibb.co/K714NYc/healthy-food-dish-black-stone-background-healthful-set-including-vegetables-fruits-grape-apple-kiwi.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 85vh;
+}
+.banner-title{
+    margin-left: 60%;
+    padding-top: 8%;
+    color: white;
+}
+
+.banner-title h1{
+    font-size: 50px;
+}
+
