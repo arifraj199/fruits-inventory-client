@@ -30,11 +30,13 @@ const Home = () => {
           {            
           products?.map(product=>
             <div className="product" key={product.id}>
+              <img src={product.picture} alt="" />
               <h3>{product.name}</h3>
               <h5>Price: {product.price}</h5>
               <p><small>{product.description}</small></p>
               <p>Quantity: {product.quantity}</p>
               <p>Supplier: {product.supplier_name}</p>
+              <button className="btn btn-success">Stock Update</button>
             </div>
             )
           }

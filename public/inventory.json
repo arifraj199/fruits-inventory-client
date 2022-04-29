@@ -2,7 +2,7 @@
     {
       "id": "626c170e89d7eeebe6bf28f0",
       "price": "$36.70",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 22,
       "name": "Lindsay Bowman",
       "supplier_name": "Irene Merrill",
@@ -11,7 +11,7 @@
     {
       "id": "626c170e290ea0357b5a83fd",
       "price": "$31.00",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 15,
       "name": "Tina Herring",
       "supplier_name": "Shari Blanchard",
@@ -20,7 +20,7 @@
     {
       "id": "626c170ef464eae6bdf8a00b",
       "price": "$10.43",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 36,
       "name": "Kerr Marks",
       "supplier_name": "Nettie Morin",
@@ -29,7 +29,7 @@
     {
       "id": "626c170ef68acf172444448d",
       "price": "$39.97",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 21,
       "name": "Malone Harper",
       "supplier_name": "Sweet Frederick",
@@ -38,7 +38,7 @@
     {
       "id": "626c170e18de007ce6447651",
       "price": "$11.41",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 22,
       "name": "Gentry Harrell",
       "supplier_name": "Richmond Briggs",
@@ -47,7 +47,7 @@
     {
       "id": "626c170e9eb327b3296b3422",
       "price": "$20.75",
-      "picture": "http://placehold.it/32x32",
+      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
       "quantity": 40,
       "name": "Mavis Daniel",
       "supplier_name": "Melinda Manning",
