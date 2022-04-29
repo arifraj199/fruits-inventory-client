@@ -1,40 +1,63 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
-import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import "./Login.css";
 
 const Login = () => {
 
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [
+    signInWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
+
+  const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
+  let errorElement;
 
   const from = location.state?.from?.pathname || '/';
 
-  if(user){
+  if(error || error1){
+    errorElement = <p>Error: {error?.message} {error1?.message}</p>
+  }
+
+  if(user || user1){
     console.log(user);
     navigate(from,{replace:true});
+  }
+
+  const handleLoginForm = async event =>{
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    await signInWithEmailAndPassword(email,password);
+    
   }
 
   return (
     <div className="w-25 mx-auto mt-5 border border-2 p-4">
       <h2 className="text-center mb-4">Login</h2>
-      <Form>
+      <Form onSubmit={handleLoginForm}> 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" />
+          <Form.Control type="email" name="email" placeholder="Enter email" />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
-          <Form.Control type="password" placeholder="Password" />
+          <Form.Control type="password" name="password" placeholder="Password" />
         </Form.Group>
         <Button className="w-100" variant="primary" type="submit">
           Login
         </Button>
       </Form>
+
+      <p className="text-danger">{errorElement}</p>
       <p><small>Don't have any account? <span><Link className="text-decoration-none" to='/register'>Create Account</Link></span></small></p>
       <p className="text-center mt-3">Or</p>
       <div>
