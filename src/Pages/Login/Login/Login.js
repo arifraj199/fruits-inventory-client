@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../../firebase.init";
 import "./Login.css";
 
@@ -32,9 +32,10 @@ const Login = () => {
           <Form.Control type="password" placeholder="Password" />
         </Form.Group>
         <Button className="w-100" variant="primary" type="submit">
-          Submit
+          Login
         </Button>
       </Form>
+      <p><small>Don't have any account? <span><Link className="text-decoration-none" to='/register'>Create Account</Link></span></small></p>
       <p className="text-center mt-3">Or</p>
       <div>
       <button onClick={()=> signInWithGoogle()} className="btn text-center w-100 rounded-3 justify-content-center align-items-center mx-auto d-flex btn-info fw-bold">
