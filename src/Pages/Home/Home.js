@@ -5,7 +5,7 @@ import "./Home.css";
 
 const Home = () => {
   const [products] = useProducts();
-  // console.log(products);
+  console.log(products);
   const navigate = useNavigate();
 
   const handleNavigate = id =>{
@@ -35,7 +35,7 @@ const Home = () => {
         <div className="product-container">
           {            
           products?.map(product=>
-            <div className="product" key={product.id}>
+            <div className="product" key={product._id}>
               
               <img src={product.picture} alt="" />
               <h3>{product.name}</h3>
@@ -43,7 +43,7 @@ const Home = () => {
               <p><small>{product.description}</small></p>
               <p>Quantity: {product.quantity}</p>
               <p>Supplier: {product.supplier_name}</p>
-              <button onClick={()=>handleNavigate(product.id)} className="btn btn-success">Stock Update</button>
+              <button onClick={()=>handleNavigate(product._id)} className="btn btn-success">Stock Update</button>
             </div>
             )
           }
