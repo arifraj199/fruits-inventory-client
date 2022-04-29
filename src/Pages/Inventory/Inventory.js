@@ -1,10 +1,12 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './Inventory.css';
 
 const Inventory = () => {
+    const {id} = useParams();
     return (
         <div>
-            <h2>This is Inventory Page</h2>
+            <h2>Products Id: {id}</h2>
         </div>
     );
 };
