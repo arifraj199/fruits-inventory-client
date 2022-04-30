@@ -36,7 +36,8 @@ const Register = () => {
             await createUserWithEmailAndPassword(email,password);
         }else{
             alert("password didn't matched");
-            event.target.reset()
+            event.target.password.reset();
+            event.target.confirmPassword.reset();
         }
     }
   
