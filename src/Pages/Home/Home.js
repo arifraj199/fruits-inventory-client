@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import "./Home.css";
 
@@ -47,6 +47,10 @@ const Home = () => {
             )
           }
         </div>
+      </div>
+
+      <div className="manage-inventory my-5 text-end">
+        <Link to='/manage'><button className="btn btn-success me-3">Manage Inventories</button></Link>
       </div>
     </div>
   );

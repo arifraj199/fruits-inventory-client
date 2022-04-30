@@ -1,0 +1,30 @@
+
+.manage-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.manage-products{
+    width: 70%;
+    margin: 20px auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 8px;
+    padding: 5px;
+}
+.manage-products img{
+    width: 250px;
+    border-radius: 8px;
+}
+.manage-product-detail{
+    width: 100%;
+    margin-left: 20px;
+    line-height: 15px;
+}
+.manage-product-detail .price{
+    line-height: 15px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.manage-product-detail button{
+    font-size: 12px;
+}

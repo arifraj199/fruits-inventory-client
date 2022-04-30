@@ -5,6 +5,7 @@ import Home from './Pages/Home/Home';
 import Inventory from './Pages/Inventory/Inventory';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Header from './Pages/Shared/Header/Header';
 
@@ -21,6 +22,7 @@ function App() {
            <Inventory></Inventory>
         </RequireAuth>
         }></Route>
+        <Route path='/manage' element={<ManageInventories></ManageInventories>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
       </Routes>

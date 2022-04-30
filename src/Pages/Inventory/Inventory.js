@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useProductDetail from "../../hooks/useProductDetail";
 import "./Inventory.css";
 
@@ -95,6 +95,9 @@ const Inventory = () => {
           </div>
           
         </div>
+      </div>
+      <div className="manage-inventory my-5 text-end">
+        <Link to='/manage'><button className="btn btn-success me-1">Manage Inventories</button></Link>
       </div>
     </div>
   );
