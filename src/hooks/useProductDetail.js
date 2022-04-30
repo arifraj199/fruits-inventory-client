@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 
 const useProductDetail = id =>{
-    const [products,setProducts] = useState([]);
+    const [product,setProduct] = useState([]);
 
     useEffect( ()=>{
-        fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`)
+        fetch(`http://localhost:5000/inventory/${id}`)
         .then(res=>res.json())
-        .then(data=>setProducts(data))
+        .then(data=>setProduct(data))
     },[id])
 
-    return [products]
+    return [product]
 };
 
 export default useProductDetail;

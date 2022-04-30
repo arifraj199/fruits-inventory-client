@@ -5,7 +5,7 @@ import "./Inventory.css";
 
 const Inventory = () => {
   const { id } = useParams();
-  const [products] = useProductDetail(id);
+  const [product] = useProductDetail(id);
   const quantityRef = useRef(0);
   const restockRef = useRef(0);
 
@@ -60,30 +60,30 @@ const Inventory = () => {
     <div>
       <div className="product-div">
         <div className="product-img">
-          <img src={products.picture} alt="" />
+          <img src={product.picture} alt="" />
         </div>
         <div className="product-detail">
           <p>
             Products Id: {id}
           </p>
           <h1>
-            {products.name}
+            {product.name}
           </h1>
           <h4>
-            Price: {products.price}
+            Price: {product.price}
           </h4>
           <p>
-            <span className="fw-bold">Quantity :</span> <input className="border border-1" type="text" ref={quantityRef}  value={products.quantity} readOnly/>
+            <span className="fw-bold">Quantity :</span> <input className="border border-1" type="text" ref={quantityRef}  value={product.quantity} readOnly/>
           </p>
           <p>
             <small>
-              {products.description}
+              {product.description}
             </small>
           </p> 
           <p>Stock : <span className="fw-bold">Available</span></p>
           <p>
             <small>
-              Supplier Name: {products.supplier_name}
+              Supplier Name: {product.supplier_name}
             </small>
           </p>
           <div className="button-field">
