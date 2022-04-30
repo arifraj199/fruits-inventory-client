@@ -33,7 +33,7 @@ const Home = () => {
         <h2>Stocks Item: {products?.length}</h2>
         <div className="product-container">
           {            
-          products?.map(product=>
+          products?.slice(0,6).map(product=>
             <div className="product" key={product._id}>
               
               <img src={product.picture} alt="" />

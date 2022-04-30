@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useProducts from '../../hooks/useProducts';
 import './ManageInventories.css';
 
@@ -25,6 +26,10 @@ const ManageInventories = () => {
                 </div>
                 )
             }
+            </div>
+
+            <div className="manage-inventory my-5 text-end">
+                <Link to='/add'><button className="btn btn-success me-1">Add New Item</button></Link>
             </div>
         </div>
     );
