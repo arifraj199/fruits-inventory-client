@@ -51,7 +51,7 @@ const ManageInventories = () => {
             </div>
 
             <div className="manage-inventory my-5 text-end">
-                <Link to='/add'><button className="btn btn-success me-1">Add New Item</button></Link>
+                <Link to='/additem'><button className="btn btn-success me-1">Add New Item</button></Link>
             </div>
         </div>
     );

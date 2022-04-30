@@ -3,8 +3,8 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <footer>
-            <h2>This is Footer</h2>
+        <footer className='text-center'>
+            <p>copyright @2022 || All Right Reserve Fruit Inventory</p>
         </footer>
     );
 };

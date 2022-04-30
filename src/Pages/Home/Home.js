@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       <div className="manage-inventory my-5 text-end">
-        <Link to='/manage'><button className="btn btn-success me-3">Manage Inventories</button></Link>
+        <Link to='/manageitem'><button className="btn btn-success me-3">Manage Inventories</button></Link>
       </div>
     </div>
   );
