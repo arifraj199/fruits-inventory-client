@@ -21,3 +21,12 @@
     padding: 2px 10px;
     font-size: 18px;
 }
+.button-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-field input{
+    width: 50%;
+    
+}

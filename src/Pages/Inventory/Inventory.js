@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import React, { useRef } from "react";
+import { useParams } from "react-router-dom";
 import useProductDetail from "../../hooks/useProductDetail";
 import "./Inventory.css";
 
@@ -7,20 +7,12 @@ const Inventory = () => {
   const { id } = useParams();
   const [products] = useProductDetail(id);
   const quantityRef = useRef(0);
-  const [quantity,setQuantity] = useState(0);
-  const location = useLocation();
+  const restockRef = useRef(0);
 
     const updateButton = () => {
-        // event.preventDefault();
         const productQuantity = quantityRef.current.value;
         const quantity = productQuantity-1;
-        // console.log(quantityDecrease);
-        
-        // console.log(quantity);
-
         const updateQuantity = {quantity}
-        console.log(updateQuantity);
-        // setQuantity(productQuantity);
 
         //send data to the server
         fetch(`http://localhost:5000/inventory/${id}`,{
@@ -33,14 +25,35 @@ const Inventory = () => {
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
-            if(data.modifiedCount > 0 ){
-                console.log('quantity decrease')
-                // setQuantity(updateQuantity);
-            }
-
         })
 
-        // location.reload();
+        window.location.reload();
+    }
+
+    const handleRestockButton = () =>{
+        const restockQuantity = restockRef.current.value;
+        const productQuantity = quantityRef.current.value;
+
+        const updateRestockQuantity = parseInt(restockQuantity) + parseInt(productQuantity);
+        console.log(updateRestockQuantity);
+
+        const quantityUpdated = {quantity:updateRestockQuantity};
+
+
+        //send data to the server
+        fetch(`http://localhost:5000/inventory/${id}`,{
+            method:"PUT",
+            headers:{
+                "content-type":"application/json"
+            },
+            body:JSON.stringify(quantityUpdated)
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+        })
+
+        window.location.reload();
     }
 
   return (
@@ -73,7 +86,14 @@ const Inventory = () => {
               Supplier Name: {products.supplier_name}
             </small>
           </p>
-          <button onClick={updateButton} className="btn btn-success">Delivered</button>
+          <div className="button-field">
+            <button onClick={updateButton} className="btn btn-success">Delivered</button>
+            <div className="d-flex">
+              <input ref={restockRef} type="number" name="restockNumber"  />
+              <button onClick={handleRestockButton} className="btn btn-success ms-1"> Restock</button>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
