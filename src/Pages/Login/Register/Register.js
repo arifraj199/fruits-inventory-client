@@ -11,7 +11,7 @@ const Register = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth,{sendEmailVerification:true});
 
 
     const [signInWithGoogle, user1, loading1, error1] = useSignInWithGoogle(auth);
@@ -23,6 +23,7 @@ const Register = () => {
     }
 
     if(user || user1){
+      console.log('verification email send',user);
       navigate('/');
     }
 
@@ -36,8 +37,7 @@ const Register = () => {
             await createUserWithEmailAndPassword(email,password);
         }else{
             alert("password didn't matched");
-            event.target.password.reset();
-            event.target.confirmPassword.reset();
+            event.target.reset();
         }
     }
   

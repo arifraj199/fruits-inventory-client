@@ -5,7 +5,6 @@ import "./Home.css";
 
 const Home = () => {
   const [products] = useProducts();
-  console.log(products);
   const navigate = useNavigate();
 
   const handleNavigate = id =>{
