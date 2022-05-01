@@ -7,7 +7,7 @@ const AddInventory = () => {
   const [user] = useAuthState(auth);
   console.log(user);
   const { register, handleSubmit } = useForm();
-  const onSubmit = data => {
+  const onSubmit = (data,event) => {
       console.log(data)
 
        //send data to the server
@@ -23,6 +23,8 @@ const AddInventory = () => {
       .then(result => {
         console.log(result);
       });
+
+      event.target.reset();
       
     };
 
