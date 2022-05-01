@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer,toast  } from "react-toastify";
 import auth from "../../../firebase.init";
+import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 
 const Login = () => {
@@ -48,12 +50,12 @@ const Login = () => {
   const handleReset = async ()=> {
     const email = emailRef.current.value
     // console.log(email);
-    if(!email){
-      alert('please enter your email for reset')
+    await sendPasswordResetEmail(email);
+    if(email){
+      toast('send email for reset password');
       
     }else{
-      await sendPasswordResetEmail(email);
-      alert('send email for reset password');
+      toast('please enter your email for reset');
     }
   }
 
@@ -78,7 +80,7 @@ const Login = () => {
       <p className="text-danger">{errorElement}</p>
       <p><small>Don't have any account? <span><Link className="text-decoration-none" to='/register'>Create Account</Link></span></small></p>
 
-      <p><small>Forget Your Password? <span><Link onClick={handleReset} className="text-decoration-none" to='/login'>Reset</Link></span></small></p>
+      <p><small>Forget Your Password? <span><Link onClick={handleReset} to='/login' className="text-decoration-none">Reset</Link></span></small></p>
       <p className="text-center mt-3">Or</p>
       <div>
       <button onClick={()=> signInWithGoogle()} className="btn text-center w-100 rounded-3 justify-content-center align-items-center mx-auto d-flex btn-info fw-bold">
