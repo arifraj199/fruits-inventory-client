@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import LoadingSpinner from '../../Shared/LoadingSpinner/LoadingSpinner';
 import './Register.css';
 
 const Register = () => {
@@ -20,6 +21,10 @@ const Register = () => {
   
     if(error || error1){
         errorElement = <p>Error: {error?.message} {error1?.message}</p>
+    }
+
+    if(loading || loading1){
+      return <LoadingSpinner></LoadingSpinner>
     }
 
     if(user || user1){

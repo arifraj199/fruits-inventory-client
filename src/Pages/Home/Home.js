@@ -43,9 +43,11 @@ const Home = () => {
               <p>Quantity: {product.quantity}</p>
               <p>Supplier: {product.supplier_name}</p>
               <button onClick={()=>handleNavigate(product._id)} className="btn btn-success">Stock Update</button>
+              
             </div>
             )
           }
+          
         </div>
       </div>
 

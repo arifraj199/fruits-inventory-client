@@ -6,6 +6,7 @@ import { ToastContainer,toast  } from "react-toastify";
 import auth from "../../../firebase.init";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
+import LoadingSpinner from "../../Shared/LoadingSpinner/LoadingSpinner";
 
 const Login = () => {
 
@@ -31,6 +32,10 @@ const Login = () => {
 
   if(error || error1 || error2){
     errorElement = <p>Error: {error?.message} {error1?.message} {error2?.message}</p>
+  }
+
+  if(loading || loading1 || sending){
+    return <LoadingSpinner></LoadingSpinner>
   }
 
   if(user || user1){
