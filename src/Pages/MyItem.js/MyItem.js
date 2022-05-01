@@ -9,12 +9,33 @@ const MyItem = () => {
     const [items,setItems] = useState([]);
     useEffect( ()=>{
         const email = user?.email;
-        fetch(`http://localhost:5000/additem?email=${email}`)
+        fetch(`http://localhost:5000/myitem?email=${email}`)
         .then(res=>res.json())
         .then(data=>{
             setItems(data);
         })
     },[user]);
+
+    const handleItemDelete = id =>{
+        const proceed = window.confirm("Are you want to delete this item?");
+        if(proceed){
+            console.log('deleted',id);
+
+            //delete data send to server
+            const url = `http://localhost:5000/myitem/${id}`;
+            fetch(url,{
+                method:"DELETE"
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                console.log(data);
+                if(data.deletedCount > 0){
+                    const remaining = items.filter(item => item._id !== id);
+                    setItems(remaining);
+                }
+            })
+        }
+    }
 
     return (
         <div>
@@ -22,7 +43,7 @@ const MyItem = () => {
             <div className="my-item-container">
             {
                 items.map(item=>
-                <div>
+                <div key={item?._id}>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={item.picture} />
                             <Card.Body>
@@ -32,7 +53,7 @@ const MyItem = () => {
                                     <p><span className='fw-bold'>Quantity: </span>{item.quantity}</p>
                                     <p><small>{item.description}</small></p>
                                 </Card.Text>
-                                <Button variant="danger">DELETE</Button>
+                                <Button onClick={()=>handleItemDelete(item._id)} variant="danger">DELETE</Button>
                             </Card.Body>
                         </Card>
                 </div>

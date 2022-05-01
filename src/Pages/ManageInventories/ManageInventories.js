@@ -30,7 +30,7 @@ const ManageInventories = () => {
     
     return (
         <div>
-            <h1>Manage All Products</h1>
+            <h1>Manage All Products:{products?.length}</h1>
             <div className='manage-products-container'>
             {
                 products?.map(product=>
