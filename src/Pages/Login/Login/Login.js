@@ -7,6 +7,7 @@ import auth from "../../../firebase.init";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
 import LoadingSpinner from "../../Shared/LoadingSpinner/LoadingSpinner";
+import axios from "axios";
 
 const Login = () => {
 
@@ -39,8 +40,8 @@ const Login = () => {
   }
 
   if(user || user1){
-    console.log(user);
-    navigate(from,{replace:true});
+    // console.log(user);
+    // 
   }
 
   const handleLoginForm = async event =>{
@@ -49,6 +50,10 @@ const Login = () => {
     const password = event.target.password.value;
 
     await signInWithEmailAndPassword(email,password);
+    const {data} = await axios.post('http://localhost:5000/login',{email});
+    console.log(data);
+    localStorage.setItem('accessToken',data.accessToken);
+    navigate(from,{replace:true});
     
   }
 
