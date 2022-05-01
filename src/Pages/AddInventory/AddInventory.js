@@ -30,39 +30,45 @@ const AddInventory = () => {
     <div>
       <h2 className="text-center mt-3">Add New Items</h2>
       <form
-        className="d-flex flex-column border border-2 rounded-3 p-5 w-25 mx-auto mt-3 mb-5"
+        className="d-flex flex-column border border-2 rounded-3 p-5 w-50 mx-auto mt-3 mb-5"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <input
+         <input
           className="mb-2"
           type="email"
-          value={user.email}
+          value={user?.email}
           readOnly
-          disabled
           {...register("email", { required: true })}
         />
+        
+        <span className="fw-bold ">Item Name:</span>
         <input
           className="mb-2"
           placeholder="items name"
           {...register("name", { required: true, maxLength: 20 })}
         />
+       
+       <span className="fw-bold ">Item Price:</span>
         <input
           className="mb-2"
           placeholder="items price"
           type="number"
           {...register("price", { min: 5, max: 150 })}
         />
+        <span className="fw-bold ">Quantity:</span>
         <input
           className="mb-2"
           placeholder="items quantity"
           type="number"
           {...register("quantity", { min: 5, max: 99 })}
         />
+        <span className="fw-bold ">Photo URL:</span>
         <input
           className="mb-2"
           placeholder="items photo url"
           {...register("picture")}
         />
+        <span className="fw-bold">Item Description:</span>
         <textarea
           className="mb-2"
           placeholder="short description"
