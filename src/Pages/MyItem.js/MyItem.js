@@ -10,29 +10,29 @@ const MyItem = () => {
     const [items,setItems] = useState([]);
     useEffect( ()=>{
         
-        // const getItems = async ()=>{
-        //     const email = user?.email;
-        //     const url = `http://localhost:5000/myitem?email=${email}`;
-        //     const {data} = await axios.get(url,{
-        //         headers:{
-        //             authorization: `Bearer ${localStorage.getItem("accessToken")}`
-        //         }
-        //     })
-        //     setItems(data);
-        // }
-
-        // getItems();
-        
-        const email = user?.email;
-        fetch(`http://localhost:5000/myitem?email=${email}`,{
-            headers:{
-                authorization: `Bearer ${localStorage.getItem("accessToken")}`
-            }
-        })
-        .then(res=>res.json())
-        .then(data=>{
+        const getItems = async ()=>{
+            const email = user?.email;
+            const url = `http://localhost:5000/myitem?email=${email}`;
+            const {data} = await axios.get(url,{
+                headers:{
+                    authorization: `Bearer ${localStorage.getItem("accessToken")}`
+                }
+            })
             setItems(data);
-        })
+        }
+
+        getItems();
+        
+        // const email = user?.email;
+        // fetch(`http://localhost:5000/myitem?email=${email}`,{
+        //     headers:{
+        //         authorization: `Bearer ${localStorage.getItem("accessToken")}`
+        //     }
+        // })
+        // .then(res=>res.json())
+        // .then(data=>{
+        //     setItems(data);
+        // })
     },[user]);
 
     const handleItemDelete = id =>{
@@ -47,7 +47,7 @@ const MyItem = () => {
             })
             .then(res=>res.json())
             .then(data=>{
-                console.log(data);
+                // console.log(data);
                 if(data.deletedCount > 0){
                     const remaining = items.filter(item => item._id !== id);
                     setItems(remaining);
