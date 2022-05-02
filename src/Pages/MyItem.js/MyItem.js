@@ -12,7 +12,7 @@ const MyItem = () => {
         
         const getItems = async ()=>{
             const email = user?.email;
-            const url = `http://localhost:5000/myitem?email=${email}`;
+            const url = `https://fast-sierra-89206.herokuapp.com/myitem?email=${email}`;
             const {data} = await axios.get(url,{
                 headers:{
                     authorization: `Bearer ${localStorage.getItem("accessToken")}`
@@ -24,7 +24,7 @@ const MyItem = () => {
         getItems();
         
         // const email = user?.email;
-        // fetch(`http://localhost:5000/myitem?email=${email}`,{
+        // fetch(`https://fast-sierra-89206.herokuapp.com/myitem?email=${email}`,{
         //     headers:{
         //         authorization: `Bearer ${localStorage.getItem("accessToken")}`
         //     }
@@ -41,7 +41,7 @@ const MyItem = () => {
             console.log('deleted',id);
 
             //delete data send to server
-            const url = `http://localhost:5000/myitem/${id}`;
+            const url = `https://fast-sierra-89206.herokuapp.com/myitem/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

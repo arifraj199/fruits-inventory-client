@@ -11,7 +11,7 @@ const AddInventory = () => {
       console.log(data)
 
        //send data to the server
-    const url = `http://localhost:5000/inventory`;
+    const url = `https://fast-sierra-89206.herokuapp.com/inventory`;
     fetch(url, {
       method: "POST",
       headers: {

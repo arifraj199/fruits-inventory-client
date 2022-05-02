@@ -13,7 +13,7 @@ const ManageInventories = () => {
             console.log('deleted',id);
 
             //delete data send to server
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://fast-sierra-89206.herokuapp.com/inventory/${id}`;
             fetch(url,{
                 method:"DELETE"
             })

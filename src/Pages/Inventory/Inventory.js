@@ -15,7 +15,7 @@ const Inventory = () => {
         const updateQuantity = {quantity}
 
         //send data to the server
-        fetch(`http://localhost:5000/inventory/${id}`,{
+        fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"
@@ -41,7 +41,7 @@ const Inventory = () => {
 
 
         //send data to the server
-        fetch(`http://localhost:5000/inventory/${id}`,{
+        fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
             method:"PUT",
             headers:{
                 "content-type":"application/json"
