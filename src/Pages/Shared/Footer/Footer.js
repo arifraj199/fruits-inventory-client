@@ -45,7 +45,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="footer-item-four">
-            <h6>NewsLetter</h6>
+            <h6>NEWSLETTERS</h6>
             <hr />
             <h6>Sign Up For Newletters</h6>
             <p>Be the First to Know. Sign up for newsletter today !</p>
