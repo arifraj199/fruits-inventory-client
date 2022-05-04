@@ -1,0 +1,29 @@
+.customers-review-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: 40px;
+}
+.customer-review-title{
+    text-align: center;
+}
+hr{
+    width: 60px;
+    margin: auto!important;
+    height: 5px;
+    color: blue!important;
+}
+.customer-review{
+    background-color: rgb(244, 244, 244);
+    padding: 40px;
+}
+.customer-review-info{
+    display: flex;
+    align-items: center;
+}
+.customer-review-info img{
+    margin-right: 15px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}

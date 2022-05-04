@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
+import CustomersReviews from "../CustomersReviews/CustomersReviews";
 import LookFarm from "../LookFarm/LookFarm";
 import "./Home.css";
 
@@ -56,6 +57,7 @@ const Home = () => {
         <Link to='/manageitem'><button className="btn btn-success me-3">Manage Inventories</button></Link>
       </div>
       <LookFarm></LookFarm>
+      <CustomersReviews></CustomersReviews>
     </div>
   );
 };
