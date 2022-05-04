@@ -28,31 +28,34 @@ const Home = () => {
             voluptatem, quibusdam ipsam atque impedit cum delectus, aspernatur
             distinctio at nihil.
           </p>
-          <button className="btn btn-outline-success fs-5 text-white fw-bold">
+          <button className="btn btn-outline-success fs-5 px-5  fw-bold">
             Know More
           </button>
         </div>
       </div>
       <div className="mb-5 text-center">
-        <h2>Stocks Item: {products?.length}</h2>
+        <h2 >Fruits Stoke</h2>
+        <hr className="item-hr"/>
         <div className="product-container">
           {            
           products?.slice(0,6).map(product=>
             <div className="product" key={product._id}>
 
               <CardGroup>
-                <Card>
+                <Card className="border border-0">
                   <Card.Img variant="top" src={product.picture} />
                   <Card.Body>
-                    <Card.Title className="fs-3">{product.name}</Card.Title>
+                    <Card.Title className="fs-3 mb-3">{product.name}</Card.Title>
                     <Card.Text>
-                    <h6><span className="fw-bold">Price:</span> {product.price}</h6>
-                    <p><small><span className="fw-bold">Quantity:</span> {product.quantity}</small></p>
+                    <h5 className="mb-1"><span className="fw-bold">Price:</span> {product.price}</h5>
+                    <p className=" mb-0"> <small><span className="fw-bold">Quantity:</span> {product.quantity}</small></p>
+                    <p><small><span className="fw-bold"> Suppier: </span>{product.supplier_name}</small></p>
+                    
                     <small>{product.description}</small>
                     </Card.Text>
                   </Card.Body>
-                  <Card.Footer>
-                    <button className="btn btn-primary">Update</button>
+                  <Card.Footer className="w-50 mx-auto border border-0 footer">
+                    <button className="btn btn-primary ">Update</button>
                   </Card.Footer>
               </Card>
               </CardGroup>
@@ -72,8 +75,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="manage-inventory my-5 text-end">
-        <Link to='/manageitem'><button className="btn btn-success me-3">Manage Inventories</button></Link>
+      <div className="manage-inventory my-5 text-end manage-button">
+        <Link to='/manageitem'><button className="btn btn-success me-3 ">Manage Inventories</button></Link>
       </div>
       <LookFarm></LookFarm>
       <CustomersReviews></CustomersReviews>
