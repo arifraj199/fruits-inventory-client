@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import CustomersReviews from "../CustomersReviews/CustomersReviews";
 import FastDelivery from "../FastDelivery/FastDelivery";
-import LookFarm from "../LookFarm/LookFarm";
+import AboutFarm from "../LookFarm/AboutFarm";
 import "./Home.css";
 
 const Home = () => {
@@ -24,9 +24,7 @@ const Home = () => {
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut enim
-            sint laboriosam error. Eveniet sed illum ut perferendis dicta,
-            voluptatem, quibusdam ipsam atque impedit cum delectus, aspernatur
-            distinctio at nihil.
+            sint laboriosam error.
           </p>
           <button className="btn btn-outline-success fs-5 px-5  fw-bold">
             Know More
@@ -34,7 +32,7 @@ const Home = () => {
         </div>
       </div>
       <div className="mb-5 text-center">
-        <h2 >Fruits Stoke</h2>
+        <h2 className="item-title">Fruits Stoke</h2>
         <hr className="item-hr"/>
         <div className="product-container">
           {            
@@ -78,7 +76,7 @@ const Home = () => {
       <div className="manage-inventory my-5 text-end manage-button">
         <Link to='/manageitem'><button className="btn btn-success me-3 ">Manage Inventories</button></Link>
       </div>
-      <LookFarm></LookFarm>
+      <AboutFarm></AboutFarm>
       <CustomersReviews></CustomersReviews>
       <FastDelivery></FastDelivery>
     </div>

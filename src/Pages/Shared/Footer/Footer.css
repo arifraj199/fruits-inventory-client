@@ -59,3 +59,21 @@
     color: #7F7F7F;
     font-size: 13px;
 }
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px) {
+    .footer-top{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 80px 40px;
+        background-color: #F8F8F8;
+      }
+      .footer-item-one{
+        width: 100%;
+    }
+      .newsletter{
+          width: 80%!important;
+      }
+}

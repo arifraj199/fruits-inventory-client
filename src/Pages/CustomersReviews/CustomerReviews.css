@@ -27,3 +27,16 @@
     width: 60px;
     height: 60px;
 }
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px) {
+    .customers-review-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+    .review-header-title{
+        margin-top: 100px;
+    }
+}

@@ -58,3 +58,38 @@
     /* height: 500px; */
     border-radius: 10px;
 }
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px) {
+  
+    .farm-header-title {
+        margin-top: 100px;
+    }
+    .title-hr{
+        width: 15%;
+        
+        background-color: blue;
+        margin: auto;
+    }
+    .farm-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+        margin:40px 14px ;
+    }
+    .farm-text-container{
+        order: 3;
+    }
+    .farm-year{
+        order: 2;
+    }
+    .farm-title{
+        width: 100%;
+    }
+    .farm-img{
+        width: 100%;
+        order: 1;
+    }
+    
+}

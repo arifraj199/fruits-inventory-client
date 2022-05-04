@@ -1,5 +1,5 @@
 .banner-container{
-    background-image: url("https://i.ibb.co/K714NYc/healthy-food-dish-black-stone-background-healthful-set-including-vegetables-fruits-grape-apple-kiwi.png");
+    background-image: url("https://i.ibb.co/zG1MRbF/banner-fruits.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -81,6 +81,32 @@
     border: 2px solid orange;
     color: black;
     
+}
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px){
+    .banner-container{
+        height: 70vh;
+    }
+    .banner-title{
+        margin-left: 10%;
+        padding-top: 38%;
+        color: white;
+    }
+    .banner-title h1{
+        font-size: 35px;
+    }
+    .banner-title button{
+        padding: 10px 20px!important;
+    }
+    .item-title{
+        margin-top: 100px;
+        font-size: 35px;
+    }
+    .product-container{
+        grid-template-columns: repeat(1,1fr);
+    }
 }
 
 

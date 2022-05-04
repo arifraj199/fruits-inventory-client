@@ -49,7 +49,7 @@ const Footer = () => {
             <hr />
             <h6>Sign Up For Newletters</h6>
             <p>Be the First to Know. Sign up for newsletter today !</p>
-            <InputGroup className="mb-3">
+            <InputGroup className="mb-3 newsletter">
               <FormControl
                 placeholder="Your Email"
                 aria-label="Recipient's username"

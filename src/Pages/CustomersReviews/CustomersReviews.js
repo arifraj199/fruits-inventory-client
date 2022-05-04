@@ -4,7 +4,7 @@ import './CustomerReviews.css';
 const CustomersReviews = () => {
     return (
         <div>
-            <h2 className='customer-review-title'>Our Customers Review</h2>
+            <h2 className='customer-review-title review-header-title'>Our Customers Review</h2>
             <p className='customer-review-title'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, omnis?</p>
             <hr className='review-hr'/>
             <div className="customers-review-container">
