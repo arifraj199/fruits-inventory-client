@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import CustomersReviews from "../CustomersReviews/CustomersReviews";
+import FastDelivery from "../FastDelivery/FastDelivery";
 import LookFarm from "../LookFarm/LookFarm";
 import "./Home.css";
 
@@ -58,6 +59,7 @@ const Home = () => {
       </div>
       <LookFarm></LookFarm>
       <CustomersReviews></CustomersReviews>
+      <FastDelivery></FastDelivery>
     </div>
   );
 };

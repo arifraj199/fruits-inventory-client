@@ -6,7 +6,7 @@ const CustomersReviews = () => {
         <div>
             <h2 className='customer-review-title'>Our Customers Review</h2>
             <p className='customer-review-title'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore, omnis?</p>
-            <hr />
+            <hr className='review-hr'/>
             <div className="customers-review-container">
                 <div className="customer-review">
                     <p><small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo et magni blanditiis assumenda, eos error ipsam distinctio amet quia quae quaerat ea nostrum debitis sint consectetur esse odio rerum accusantium?</small></p>

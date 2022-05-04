@@ -7,7 +7,7 @@
 .customer-review-title{
     text-align: center;
 }
-hr{
+.review-hr{
     width: 60px;
     margin: auto!important;
     height: 5px;
