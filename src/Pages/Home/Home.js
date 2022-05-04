@@ -1,4 +1,5 @@
 import React from "react";
+import { Card, CardGroup } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import useProducts from "../../hooks/useProducts";
 import CustomersReviews from "../CustomersReviews/CustomersReviews";
@@ -38,14 +39,31 @@ const Home = () => {
           {            
           products?.slice(0,6).map(product=>
             <div className="product" key={product._id}>
+
+              <CardGroup>
+                <Card>
+                  <Card.Img variant="top" src={product.picture} />
+                  <Card.Body>
+                    <Card.Title className="fs-3">{product.name}</Card.Title>
+                    <Card.Text>
+                    <h6><span className="fw-bold">Price:</span> {product.price}</h6>
+                    <p><small><span className="fw-bold">Quantity:</span> {product.quantity}</small></p>
+                    <small>{product.description}</small>
+                    </Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <button className="btn btn-primary">Update</button>
+                  </Card.Footer>
+              </Card>
+              </CardGroup>
               
-              <img src={product.picture} alt="" />
+              {/* <img src={product.picture} alt="" />
               <h3>{product.name}</h3>
               <h5>Price: {product.price}</h5>
               <p><small>{product.description}</small></p>
               <p>Quantity: {product.quantity}</p>
               <p>Supplier: {product.supplier_name}</p>
-              <button onClick={()=>handleNavigate(product._id)} className="btn btn-success">Stock Update</button>
+              <button onClick={()=>handleNavigate(product._id)} className="btn btn-success">Stock Update</button> */}
               
             </div>
             )

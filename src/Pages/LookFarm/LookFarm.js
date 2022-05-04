@@ -7,7 +7,7 @@ const LookFarm = () => {
       <h1 className="text-center farm-header-title">About Our Farm</h1>
       <hr className="title-hr" />
       <div className="farm-container">
-        <div className="">
+        <div>
           <h5 className="fw-bold farm-title">Have Look at out beautiful Farm</h5>
           <p>
             We provides fresh organic fruits and vegetable which good for health and wealth.You can get best fruits and vegetable without formalin.The year was 2021. It was the best of times. 
@@ -22,7 +22,7 @@ const LookFarm = () => {
         </div>
         <div className="farm-img">
           <img
-            src="https://i.ibb.co/WPR4pJM/pablo-merchan-montes-hy-IE90-CN6b0-unsplash.jpg"
+            src="https://i.ibb.co/6wVpD3R/female-wearing-overalls-collecting-grapes-vineyard-1.png"
             alt=""
           />
         </div>
