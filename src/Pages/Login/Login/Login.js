@@ -75,9 +75,9 @@ const Login = () => {
         <img src="https://i.ibb.co/5KZ4p42/4957136.jpg" alt="" />
       </div>
       <div className="login-form border-2 px-5">
-      <h2 className="text-center mt-2 mb-4 text-white fs-1 fw-bold pt-4 login-form-title">Login</h2>
+      <h2 className="text-center mt-4 mb-4 text-white fs-1 fw-bold pt-4 login-form-title">Login</h2>
       <Form onSubmit={handleLoginForm}> 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-2" controlId="formBasicEmail">
           <Form.Control className="w-75 mx-auto" type="email" ref={emailRef} name="email" placeholder="email" required />
         </Form.Group>
 
