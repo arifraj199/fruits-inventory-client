@@ -1,0 +1,55 @@
+.login-form-container{
+    background-image: url("https://i.ibb.co/SXGSqNV/login-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-form{
+    width: 450px;
+    height: 470px;
+    background-color: #141a1c
+    
+}
+.login-form-title{
+    font-family: 'Poppins', sans-serif;
+}
+.login-img{
+    width: 450px;
+    height: 470px;
+    
+}
+.login-img img{
+    width: 100%;
+    height: 470px;
+}
+.login-form-button{
+    width: 140px;
+    margin: 20px auto;
+   
+}
+.login-form-button button{
+    width: 100%;
+    border-radius: 25px;
+    background-color: black;
+    border: 2px solid orange;
+}
+
+.login-form-button button:hover{
+    background-color: rgb(160, 48, 7);
+    border: 2px solid rgb(160, 48, 7);
+}
+
+.login-form-reset-text,.login-form-create-account-text{
+    font-size: 13px;
+    text-align: center;
+    color: #CAD5E2
+}
+.error-text{
+    font-size: 12px;
+    text-align: center;
+    
+}

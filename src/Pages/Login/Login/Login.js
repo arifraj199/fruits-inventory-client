@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Button, Form } from "react-bootstrap";
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { ToastContainer,toast  } from "react-toastify";
+import { toast  } from "react-toastify";
 import auth from "../../../firebase.init";
 import 'react-toastify/dist/ReactToastify.css';
 import "./Login.css";
@@ -70,33 +70,47 @@ const Login = () => {
   }
 
   return (
-    <div className="w-25 mx-auto my-5 border border-2 p-4">
-      <h2 className="text-center mb-4">Login</h2>
+    <div className="login-form-container">
+      <div className="login-img">
+        <img src="https://i.ibb.co/5KZ4p42/4957136.jpg" alt="" />
+      </div>
+      <div className="login-form border-2 px-5">
+      <h2 className="text-center mt-2 mb-4 text-white fs-1 fw-bold pt-4 login-form-title">Login</h2>
       <Form onSubmit={handleLoginForm}> 
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" ref={emailRef} name="email" placeholder="Enter email" />
+          <Form.Control className="w-75 mx-auto" type="email" ref={emailRef} name="email" placeholder="email" required />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Password</Form.Label>
-          <Form.Control type="password" name="password" placeholder="Password" />
+        <Form.Group className="mb-1" controlId="formBasicPassword">
+          <Form.Control className="w-75 mx-auto" type="password" name="password" placeholder="password" required />
         </Form.Group>
-        <Button className="w-100" variant="primary" type="submit">
+        <p className="login-form-reset-text text-end w-75 mx-auto "><small>Forget Your Password? <span><Link onClick={handleReset} to='/login' className="text-decoration-none ">Reset</Link></span></small></p>
+        <div className="login-form-button">
+        <Button variant="primary" type="submit">
           Login
         </Button>
+        </div>
       </Form>
 
-      <p className="text-danger">{errorElement}</p>
-      <p><small>Don't have any account? <span><Link className="text-decoration-none" to='/register'>Create Account</Link></span></small></p>
+      <p className="text-danger error-text">{errorElement}</p>
+      
 
-      <p><small>Forget Your Password? <span><Link onClick={handleReset} to='/login' className="text-decoration-none">Reset</Link></span></small></p>
-      <p className="text-center mt-3">Or</p>
-      <div>
-      <button onClick={()=> signInWithGoogle()} className="btn text-center w-100 rounded-3 justify-content-center align-items-center mx-auto d-flex btn-info fw-bold">
+      <div className="d-flex justify-content-center align-items-center">
+        <hr className="bg-primary w-25"/>
+        <p className="text-center mt-1 text-white mx-2">Or</p>
+        <hr className="bg-primary w-25"/>
+      </div>
+      
+      <div className="w-75 mx-auto">
+      <button onClick={()=> signInWithGoogle()} className="btn text-center w-100 rounded-3 justify-content-center align-items-center mx-auto d-flex btn-dark fw-bold">
           <img src='https://i.ibb.co/WGjM94V/google.png' alt="" />
           <span className="ms-2">Google Sign In</span>
         </button>
+      </div>
+     
+      <p className="login-form-create-account-text mt-4"><small>Don't have any account? <span><Link className="text-decoration-none" to='/register'>Create Account</Link></span></small></p>
+      
+      
       </div>
     </div>
   );
