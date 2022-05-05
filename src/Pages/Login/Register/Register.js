@@ -51,19 +51,19 @@ const Register = () => {
       <div className="login-img">
         <img src="https://i.ibb.co/pw6kGSR/Mobile-login.jpg" alt="" />
       </div>
-      <div className="login-form border-2 px-5">
+      <div className="login-form register-form border-2 px-5">
       <h2 className="text-center mt-2 mb-4 text-white fs-1 fw-bold pt-4 login-form-title">Register</h2>
       <Form onSubmit={handleRegisterForm}> 
         <Form.Group className="mb-2" controlId="formBasicEmail">
-          <Form.Control className="w-75 mx-auto" type="email" name="email" placeholder="email" required />
+          <Form.Control className="login-form-input" type="email" name="email" placeholder="email" required />
         </Form.Group>
 
         <Form.Group className="mb-2" controlId="formBasicPassword">
-          <Form.Control className="w-75 mx-auto" type="password" name="password" placeholder="password" required />
+          <Form.Control className="login-form-input" type="password" name="password" placeholder="password" required />
         </Form.Group>
         
         <Form.Group className="mb-1" controlId="formBasicPassword">
-            <Form.Control className="w-75 mx-auto" type="password" name='confirmPassword' placeholder="Confirm Password" required/>
+            <Form.Control className="login-form-input" type="password" name='confirmPassword' placeholder="Confirm Password" required/>
         </Form.Group>
 
         <div className="login-form-button">

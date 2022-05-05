@@ -26,6 +26,11 @@
     width: 100%;
     height: 480px;
 }
+
+.login-form-input,.login-form-reset-text,.login-form-create-account-text{
+    width: 75%!important;
+    margin: auto;
+}
 .login-form-button{
     width: 140px;
     margin: 20px auto;
@@ -47,9 +52,40 @@
     font-size: 13px;
     text-align: center;
     color: #CAD5E2
+    
 }
 .error-text{
     font-size: 12px;
     text-align: center;
+    
+}
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px){
+    .login-form-container{
+        height: 80vh;
+        display: block;
+        padding-top: 25px;
+        padding-left: 12px;
+    }
+    .login-form{
+        width: 350px;
+        height: 450px;
+        border-radius: 10px;
+        background-color: #141a1c
+    }
+    .register-form{
+        height: 470px;
+    }
+    .login-img{
+        display: none;
+    }
+    .login-form-input,.login-form-reset-text,.login-form-create-account-text{
+        width: 100%!important;
+    }
+    .error-text{
+        font-size: 10px;
+    }
     
 }

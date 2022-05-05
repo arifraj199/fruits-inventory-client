@@ -78,13 +78,13 @@ const Login = () => {
       <h2 className="text-center mt-4 mb-4 text-white fs-1 fw-bold pt-4 login-form-title">Login</h2>
       <Form onSubmit={handleLoginForm}> 
         <Form.Group className="mb-2" controlId="formBasicEmail">
-          <Form.Control className="w-75 mx-auto" type="email" ref={emailRef} name="email" placeholder="email" required />
+          <Form.Control className=" login-form-input" type="email" ref={emailRef} name="email" placeholder="email" required />
         </Form.Group>
 
         <Form.Group className="mb-1" controlId="formBasicPassword">
-          <Form.Control className="w-75 mx-auto" type="password" name="password" placeholder="password" required />
+          <Form.Control className="login-form-input" type="password" name="password" placeholder="password" required />
         </Form.Group>
-        <p className="login-form-reset-text text-end w-75 mx-auto "><small>Forget Your Password? <span><Link onClick={handleReset} to='/login' className="text-decoration-none ">Reset</Link></span></small></p>
+        <p className="login-form-reset-text text-end"><small>Forget Your Password? <span><Link onClick={handleReset} to='/login' className="text-decoration-none ">Reset</Link></span></small></p>
         <div className="login-form-button">
         <Button variant="primary" type="submit">
           Login
