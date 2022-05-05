@@ -53,7 +53,7 @@ const Home = () => {
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer className="w-50 mx-auto border border-0 footer">
-                    <button className="btn btn-primary ">Update</button>
+                    <button onClick={()=>handleNavigate(product._id)} className="btn btn-primary ">Update</button>
                   </Card.Footer>
               </Card>
               </CardGroup>

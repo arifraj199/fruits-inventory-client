@@ -1,43 +1,51 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import useProductDetail from "../../hooks/useProductDetail";
 import "./Inventory.css";
 
 const Inventory = () => {
   const { id } = useParams();
-  const [product] = useProductDetail(id);
-  const quantityRef = useRef(0);
+  const [product,setProduct] = useState({});
   const restockRef = useRef(0);
 
-    const updateButton = () => {
-        const productQuantity = quantityRef.current.value;
-        const quantity = productQuantity-1;
-        const updateQuantity = {quantity}
+  useEffect( ()=>{
+    const url = `https://fast-sierra-89206.herokuapp.com/inventory/${id}`;
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>{
+      setProduct(data);
+    })
+  },[id]);
 
-        //send data to the server
-        fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
-            method:"PUT",
-            headers:{
-                "content-type":"application/json"
-            },
-            body:JSON.stringify(updateQuantity)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-        })
+    const handleDeliver = id => {
+        if(product.quantity > 0){
+          const {quantity,...rest} = product;
+          const newQuantity = parseInt(quantity) - 1;
+          const newItem = {quantity:newQuantity,...rest};
+          setProduct(newItem);
 
-        window.location.reload();
+
+            //send data to the server
+          fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
+          method:"PUT",
+          headers:{
+              "content-type":"application/json"
+          },
+          body:JSON.stringify(newItem)
+          })
+          .then(res=>res.json())
+          .then(data=>{
+              console.log(data);
+          })
+
+        }else{}
     }
 
     const handleRestockButton = () =>{
         const restockQuantity = restockRef.current.value;
-        const productQuantity = quantityRef.current.value;
-
-        const updateRestockQuantity = parseInt(restockQuantity) + parseInt(productQuantity);
-        console.log(updateRestockQuantity);
-
-        const quantityUpdated = {quantity:updateRestockQuantity};
+        const {quantity,...rest} = product;
+        const newQuantity = parseInt(quantity) + parseInt(restockQuantity);
+        const newItem = {quantity:newQuantity,...rest};
+        setProduct(newItem);
 
 
         //send data to the server
@@ -46,14 +54,14 @@ const Inventory = () => {
             headers:{
                 "content-type":"application/json"
             },
-            body:JSON.stringify(quantityUpdated)
+            body:JSON.stringify(newItem)
         })
         .then(res=>res.json())
         .then(data=>{
             console.log(data);
         })
 
-        window.location.reload();
+        restockRef.current.value = "";
     }
 
   return (
@@ -73,21 +81,21 @@ const Inventory = () => {
             Price: {product.price}
           </h4>
           <p>
-            <span className="fw-bold">Quantity :</span> <input className="border border-1" type="text" ref={quantityRef}  value={product.quantity} readOnly/>
+            <span className="fw-bold">Quantity :</span> <input className="border border-1" type="text"  value={product.quantity} readOnly/>
           </p>
           <p>
             <small>
               {product.description}
             </small>
           </p> 
-          <p>Stock : <span className="fw-bold">Available</span></p>
+          <p>Stock : {product.quantity <= 0 ? <span className="fw-bold text-danger">Stock Out</span> :<span className="fw-bold">Available</span>}</p>
           <p>
             <small>
               Supplier Name: {product.supplier_name}
             </small>
           </p>
           <div className="button-field">
-            <button onClick={updateButton} className="btn btn-success">Delivered</button>
+            <button onClick={handleDeliver} className="btn btn-success">Delivered</button>
             <div className="d-flex">
               <input ref={restockRef} type="number" name="restockNumber"  />
               <button onClick={handleRestockButton} className="btn btn-success ms-1"> Restock</button>
