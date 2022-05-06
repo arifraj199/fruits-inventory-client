@@ -71,6 +71,13 @@ const AddInventory = () => {
             />
       </div>
 
+      <span className="fw-bold">Supplier Name: </span>
+          <input
+            className="mb-2"
+            placeholder="supplier name"
+            {...register("supplier_name", { required: true, maxLength: 20 })}
+          />
+
       <span className="fw-bold ">Photo URL:</span>
           <input
             className="mb-2"
