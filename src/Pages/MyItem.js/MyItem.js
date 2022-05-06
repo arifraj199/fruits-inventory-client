@@ -58,13 +58,15 @@ const MyItem = () => {
 
     return (
         <div>
-            <h2 className='text-center mt-5 my-item-title'>My items: {items?.length}</h2>
-            <div className="my-item-container">
+            <h2 className='text-center mt-5 mb-3 my-item-title'>My items: {items?.length}</h2>
+            <div className="my-item-container mb-5">
             {
                 items?.map(item=>
                 <div key={item?._id}>
                     <Card className='my-item-card' >
-                        <Card.Img className='my-item-img' variant="top" src={item.picture} />
+                        <div className='my-item-img'>
+                            <img src={item.picture} alt="" />
+                        </div>
                             <Card.Body className='text-center'>
                                 <Card.Title className='fs-3'>{item.name}</Card.Title>
                                 <Card.Text>
