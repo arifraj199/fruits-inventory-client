@@ -34,7 +34,7 @@ const ManageInventories = () => {
   return (
     <div>
       <h1 className="text-center mt-3 manage-product-title">
-        Manage Products:{products?.length}
+        Manage Items:{products?.length}
       </h1>
       <div className="manage-inventory text-center my-3">
         <Link to="/additem">

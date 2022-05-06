@@ -2,6 +2,7 @@ import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import auth from "../../firebase.init";
+import './AddInventory.css';
 
 const AddInventory = () => {
   const [user] = useAuthState(auth);
@@ -29,55 +30,62 @@ const AddInventory = () => {
     };
 
   return (
-    <div>
-      <h2 className="text-center mt-3">Add New Items</h2>
+    <div className="add-item-container">
+      <h2 className="text-center mb-4 add-item-title">Add Items</h2>
       <form
-        className="d-flex flex-column border border-2 rounded-3 p-5 w-50 mx-auto mt-3 mb-5"
+        className="d-flex flex-column add-item-form-container"
         onSubmit={handleSubmit(onSubmit)}
       >
-         <input
-          className="mb-2"
-          type="email"
-          value={user?.email}
-          readOnly
-          {...register("email", { required: true })}
-        />
+         <span className="fw-bold">Email: </span>
+          <input
+            className="mb-2"
+            type="email"
+            value={user?.email}
+            readOnly
+            {...register("email", { required: true })}
+          />
+
+         <span className="fw-bold">Item Name: </span>
+          <input
+            className="mb-2"
+            placeholder="items name"
+            {...register("name", { required: true, maxLength: 20 })}
+          />
         
-        <span className="fw-bold ">Item Name:</span>
-        <input
-          className="mb-2"
-          placeholder="items name"
-          {...register("name", { required: true, maxLength: 20 })}
-        />
+        
        
-       <span className="fw-bold ">Item Price:</span>
-        <input
-          className="mb-2"
-          placeholder="items price"
-          type="number"
-          {...register("price", { min: 5, max: 150 })}
-        />
-        <span className="fw-bold ">Quantity:</span>
-        <input
-          className="mb-2"
-          placeholder="items quantity"
-          type="number"
-          {...register("quantity", { min: 5, max: 99 })}
-        />
-        <span className="fw-bold ">Photo URL:</span>
-        <input
-          className="mb-2"
-          placeholder="items photo url"
-          {...register("picture")}
-        />
+      <div className="d-flex justify-content-between align-items-center mb-2">
+          <span className="fw-bold ">Price: </span>
+            <input
+              className=" add-item-price ms-2"
+              placeholder="price"
+              type="number"
+              {...register("price", { min: 5, max: 150 })}
+            />
+            <span className="fw-bold ms-3">Quantity: </span>
+            <input
+              className=" add-item-quantity ms-2"
+              placeholder="quantity"
+              type="number"
+              {...register("quantity", { min: 5, max: 99 })}
+            />
+      </div>
+
+      <span className="fw-bold ">Photo URL:</span>
+          <input
+            className="mb-2"
+            placeholder="items photo url"
+            {...register("picture")}
+          />
+
         <span className="fw-bold">Item Description:</span>
         <textarea
-          className="mb-2"
+          className="mb-3"
           placeholder="short description"
           {...register("description", { required: true, maxLength: 150 })}
         />
         <input
-          className="mb-2 btn btn-success"
+          className="mb-2 btn add-item-button"
           type="submit"
           value="Add Item"
         />

@@ -74,7 +74,7 @@ const Home = () => {
       </div>
 
       <div className="manage-inventory my-5 text-end manage-button">
-        <Link to='/manageitem'><button className="btn btn-success me-3 ">Manage Inventories</button></Link>
+        <Link to='/manageitem'><button className="btn me-3 ">Manage Inventories</button></Link>
       </div>
       <AboutFarm></AboutFarm>
       <CustomersReviews></CustomersReviews>

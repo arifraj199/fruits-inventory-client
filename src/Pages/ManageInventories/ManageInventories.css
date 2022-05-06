@@ -1,5 +1,6 @@
 .manage-product-title{
     font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
 .manage-products{
     display: flex;
