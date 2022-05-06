@@ -71,12 +71,12 @@ const Inventory = () => {
           <img src={product.picture} alt="" />
         </div>
         <div className="product-detail">
-          <h1>
+          <h1 className="mb-3">
             {product.name}
           </h1>
 
           <h4>
-            Price: {product.price}
+            <span className="text-success text-decoration-underline fw-bold">{product.price}</span>
           </h4>
           <hr />
           <div className="mt-2 mb-4">
@@ -106,8 +106,8 @@ const Inventory = () => {
           <div className="button-field">
             <button onClick={handleDeliver} className="btn ">Delivered</button>
             <div className="d-flex">
-              <input className="border border-0 bg-light" ref={restockRef} type="number" name="restockNumber" placeholder="restoke item"  />
-              <button onClick={handleRestockButton} className="btn ms-1"> Restock</button>
+              <input className="border border-1 bg-light" ref={restockRef} type="number" name="restockNumber" placeholder="restoke item"  />
+              <button onClick={handleRestockButton} className="btn ms-1 "> Restock</button>
             </div>
           </div>
           

@@ -14,7 +14,7 @@
 }
 .product-img img{
     width: 100%;
-    height: 400px;
+    height: 410px;
     border-radius: 8px;
     
 }
@@ -64,4 +64,29 @@
     color: rgb(160, 48, 7);
     border: 2px solid orange;
     color: white;
+}
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px){
+    .product-div{
+        display: block;
+        padding: 0 15px;
+    }
+    .product-img {
+        width: 100%;
+        margin: 0;     
+    }
+    .product-detail{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .button-field{
+        width: 100%; 
+    }
+
+    .button-field .btn{
+        padding: 8px 10px;
+        margin-right: 15px;
+    }
+    
 }
