@@ -58,21 +58,26 @@ const MyItem = () => {
 
     return (
         <div>
-            <h2>order by this email:{items?.length}</h2>
+            <h2 className='text-center mt-5 my-item-title'>My items: {items?.length}</h2>
             <div className="my-item-container">
             {
                 items?.map(item=>
                 <div key={item?._id}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Img variant="top" src={item.picture} />
-                            <Card.Body>
-                                <Card.Title>{item.name}</Card.Title>
+                    <Card className='my-item-card' >
+                        <Card.Img className='my-item-img' variant="top" src={item.picture} />
+                            <Card.Body className='text-center'>
+                                <Card.Title className='fs-3'>{item.name}</Card.Title>
                                 <Card.Text>
-                                    <p><span className='fw-bold'>Price: </span>{item.price}</p>
-                                    <p><span className='fw-bold'>Quantity: </span>{item.quantity}</p>
                                     <p><small>{item.description}</small></p>
+
+                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Price: </span>{item.price}</p>
+
+                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Quantity: </span>{item.quantity}</p>
+
+                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Supplier: </span>{item.supplier_name}</p>
+                                    
                                 </Card.Text>
-                                <Button onClick={()=>handleItemDelete(item._id)} variant="danger">DELETE</Button>
+                                <Button className='w-100' onClick={()=>handleItemDelete(item._id)} variant="danger">DELETE</Button>
                             </Card.Body>
                         </Card>
                 </div>
