@@ -1,4 +1,6 @@
-
+.manage-product-title{
+    font-family: 'Poppins', sans-serif;
+}
 .manage-products{
     display: flex;
     justify-content: center;
@@ -27,4 +29,24 @@
 }
 .manage-product-detail button{
     font-size: 12px;
+}
+.manage-inventory button{
+    background-color: white;
+    color: black;
+    border: 2px solid orange;
+    border-radius: 10px;
+    transition: 0.5s all ease;
+    padding: 8px 15px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+.manage-inventory button:hover{
+    background-color: rgb(160, 48, 7);
+    border: 2px solid rgb(160, 48, 7);
+    
+}
+
+.manage-product-table{
+    width: 75%;
+    margin: auto;
 }

@@ -35,7 +35,7 @@
     width: 50%;
     
 }
-.button-field button,.manage-inventory button{
+.button-field button,.manage-item-inventory button{
     background-color: rgb(160, 48, 7);
     color: white;
     border: none;
@@ -46,20 +46,20 @@
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
-.button-field button:hover,.manage-inventory button:hover{
+.button-field button:hover,.manage-item-inventory button:hover{
     background-color: white;
     border: 2px solid orange;
     color: black;
 }
 
-.manage-inventory{
+.manage-item-inventory{
     padding: 50px;
 }
-.manage-inventory button{
+.manage-item-inventory button{
     background-color: white;
     color: rgb(160, 48, 7);
 }
-.manage-inventory button:hover{
+.manage-item-inventory button:hover{
     background-color: rgb(160, 48, 7);
     color: rgb(160, 48, 7);
     border: 2px solid orange;
