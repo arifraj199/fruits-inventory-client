@@ -68,15 +68,15 @@ const MyItem = () => {
                             <img src={item.picture} alt="" />
                         </div>
                             <Card.Body className='text-center'>
-                                <Card.Title className='fs-3'>{item.name}</Card.Title>
+                                <Card.Title className='fs-4'>{item.name}</Card.Title>
                                 <Card.Text>
                                     <p><small>{item.description}</small></p>
 
-                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Price: </span>{item.price}</p>
+                                    <p className='bg-light py-1 fs-6'><span className='fw-bold'>Price: </span>{item.price}</p>
 
-                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Quantity: </span>{item.quantity}</p>
+                                    <p className='bg-light py-1 fs-6'><span className='fw-bold'>Quantity: </span>{item.quantity}</p>
 
-                                    <p className='bg-light py-1 fs-5'><span className='fw-bold'>Supplier: </span>{item.supplier_name}</p>
+                                    <p className='bg-light py-1 fs-6'><span className='fw-bold'>Supplier: </span>{item.supplier_name}</p>
                                     
                                 </Card.Text>
                                 <Button className='w-100' onClick={()=>handleItemDelete(item._id)} variant="danger">DELETE</Button>
