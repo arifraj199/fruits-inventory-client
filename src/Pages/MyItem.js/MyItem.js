@@ -26,7 +26,7 @@ const MyItem = () => {
             }
             catch(error){
                 console.log(error.message);
-                if(error.response.message === 401 || error.response.message === 403){
+                if(error.response.status === 401 || error.response.status === 403){
                     signOut(auth);
                     navigate('/login')
                 }

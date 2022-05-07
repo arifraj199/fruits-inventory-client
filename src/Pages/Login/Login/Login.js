@@ -41,7 +41,7 @@ const Login = () => {
 
   if(user || user1){
     // console.log(user);
-    // navigate(from,{replace:true});
+    navigate(from,{replace:true});
     // 
   }
 

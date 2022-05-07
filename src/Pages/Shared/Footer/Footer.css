@@ -67,7 +67,7 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
-        padding: 80px 40px;
+        padding: 80px 20px;
         background-color: #F8F8F8;
       }
       .footer-item-one{

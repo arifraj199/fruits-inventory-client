@@ -1,0 +1,14 @@
+.questions-accordion{
+    width: 50%;
+    margin: 60px auto;
+}
+
+
+/* responsive design for mobile device */
+@media only screen and (max-width:688px){
+    .questions-accordion{
+        width: 95%;
+        margin: 60px auto;
+    }
+    
+}
