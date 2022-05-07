@@ -1,6 +1,7 @@
 import React from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import auth from "../../firebase.init";
 import './AddInventory.css';
 
@@ -24,6 +25,8 @@ const AddInventory = () => {
       .then(result => {
         console.log(result);
       });
+
+      toast('item added');
 
       event.target.reset();
       

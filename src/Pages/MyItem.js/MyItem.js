@@ -1,24 +1,36 @@
 import axios from 'axios';
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './MyItem.css';
 
 const MyItem = () => {
     const [user] = useAuthState(auth);
     const [items,setItems] = useState([]);
+    const navigate = useNavigate();
     useEffect( ()=>{
         
         const getItems = async ()=>{
             const email = user?.email;
             const url = `https://fast-sierra-89206.herokuapp.com/myitem?email=${email}`;
-            const {data} = await axios.get(url,{
-                headers:{
-                    authorization: `Bearer ${localStorage.getItem("accessToken")}`
+            try{
+                const {data} = await axios.get(url,{
+                    headers:{
+                        authorization: `Bearer ${localStorage.getItem("accessToken")}`
+                    }
+                })
+                setItems(data);
+            }
+            catch(error){
+                console.log(error.message);
+                if(error.response.message === 401 || error.response.message === 403){
+                    signOut(auth);
+                    navigate('/login')
                 }
-            })
-            setItems(data);
+            }
         }
 
         getItems();

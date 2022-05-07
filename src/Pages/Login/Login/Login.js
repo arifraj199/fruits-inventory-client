@@ -41,6 +41,7 @@ const Login = () => {
 
   if(user || user1){
     // console.log(user);
+    // navigate(from,{replace:true});
     // 
   }
 
@@ -49,11 +50,13 @@ const Login = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
 
+    console.log(email,password)
+
     await signInWithEmailAndPassword(email,password);
     const {data} = await axios.post('https://fast-sierra-89206.herokuapp.com/login',{email});
     console.log(data);
     localStorage.setItem('accessToken',data.accessToken);
-    navigate(from,{replace:true});
+    
     
   }
 

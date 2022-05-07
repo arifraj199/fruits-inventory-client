@@ -1,3 +1,7 @@
+.navbar{
+    background-color: aqua!important;
+}
+
 .login .login-button,.signout button{
     background-color: black;
     color: white;
