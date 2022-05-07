@@ -47,8 +47,8 @@ const ManageInventories = () => {
             <thead>
               <tr>
                 <th>Item Name</th>
-                <th>Quantity</th>
-                <th>Price (per item)</th>
+                <th>Quantity(kg)</th>
+                <th>Price (per kg)</th>
                 <th>Price (total)</th>
                 <th>Supplier Name</th>
                 <th>Delete</th>
@@ -59,9 +59,9 @@ const ManageInventories = () => {
                 <tr key={product?._id}>
                   <td>{product?.name}</td>
                   <td>{product?.quantity}</td>
-                  <td>{product?.price}</td>
+                  <td>{product?.price}tk</td>
                   <td>
-                    {parseInt(product?.quantity) * parseInt(product?.price)}
+                    {parseInt(product?.quantity) * parseInt(product?.price)}tk
                   </td>
                   <td>{product?.supplier_name}</td>
                   <td>

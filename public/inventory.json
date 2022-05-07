@@ -1,109 +1,178 @@
 [
     {
-      "id": "626c170e89d7eeebe6bf28f0",
-      "price": "$36.70",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "120",
+      "picture": "https://i.ibb.co/JQXbncf/apple.png",
       "quantity": 22,
-      "name": "Lindsay Bowman",
-      "supplier_name": "Irene Merrill",
-      "description": "Mollit sit deserunt laboris nulla cupidatat enim ex et dolor laboris consequat Lorem quis. Non labore consectetur adipisicing consequat officia reprehenderit consectetur."
+      "name": "Apple",
+      "supplier_name": "Rahim Store",
+      "description": "An apple is an edible fruit produced by an apple tree. Apple trees are cultivated worldwide and are the most widely grown species in the genus Malus. The tree originated in Central Asia, where its wild ancestor, Malus sieversii, is still found today."
     },
     {
-      "id": "626c170e290ea0357b5a83fd",
-      "price": "$31.00",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "100",
+      "picture": "https://i.ibb.co/t3H8WXX/orange.jpg",
       "quantity": 15,
-      "name": "Tina Herring",
-      "supplier_name": "Shari Blanchard",
-      "description": "Fugiat aliquip mollit veniam irure pariatur magna dolore tempor. Labore do non esse ipsum ex. Consequat eu Lorem adipisicing voluptate aute ea nulla duis. "
+      "name": "Orange",
+      "supplier_name": "Rahim Store",
+      "description": "An orange is a fruit of various citrus species in the family Rutaceae; it primarily refers to Citrus x Sinensis, which is also called sweet orange, to distinguish it from the related Citrus x Aurantium, referred to as bitter orange."
     },
     {
-      "id": "626c170ef464eae6bdf8a00b",
-      "price": "$10.43",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
-      "quantity": 36,
-      "name": "Kerr Marks",
-      "supplier_name": "Nettie Morin",
-      "description": "Minim mollit deserunt culpa nisi. Eu consectetur incididunt deserunt exercitation exercitation pariatur nostrud eu quis. Incididunt veniam proident excepteur velit ipsum nulla consequat ut. "
+      "price": "70",
+      "picture": "https://i.ibb.co/LxQPXdN/julien-pianetti-Cr9h-Zrp-C1-Oc-unsplash.jpg",
+      "quantity": 26,
+      "name": "Pineapple",
+      "supplier_name": "Rajib Enterprise",
+      "description": "The pineapple (Ananas comosus) is a tropical plant with an edible fruit; it is the most economically significant plant in the family Bromeliaceae. The pineapple is indigenous to South America, where it has been cultivated for many centuries."
     },
     {
-      "id": "626c170ef68acf172444448d",
-      "price": "$39.97",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
-      "quantity": 21,
-      "name": "Malone Harper",
-      "supplier_name": "Sweet Frederick",
-      "description": "Id sunt ut in et esse cupidatat nisi commodo ea aliquip officia irure. Officia laborum ullamco nisi magna aliquip labore quis sint enim. Aute ea labore in est deserunt non."
+      "price": "30",
+      "picture": "https://i.ibb.co/sPHvzvQ/carrot.png",
+      "quantity": 25,
+      "name": "Carrot",
+      "supplier_name": "Sweet Store",
+      "description": "The carrot is a root vegetable, typically orange in color, though purple, black, red, white, and yellow cultivars exist, all of which are domesticated forms of the wild carrot, Daucus carota, native to Europe and Southwestern Asia."
     },
     {
-      "id": "626c170e18de007ce6447651",
-      "price": "$11.41",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "20",
+      "picture": "https://i.ibb.co/C2hBTkp/markus-winkler-L8-Gbx-VUQ-f0-unsplash.jpg",
       "quantity": 22,
-      "name": "Gentry Harrell",
-      "supplier_name": "Richmond Briggs",
-      "description": "Commodo culpa ipsum nulla irure. Ad et deserunt quis Lorem excepteur. Pariatur veniam culpa deserunt aute. "
+      "name": "Cucumber",
+      "supplier_name": "Rajib Enterprise",
+      "description": "Cucumbers are a type of edible plant that belongs to the gourd family. It's widely cultivated and makes a nutritious addition to any diet. Cucumber is usually considered a vegetable because of how it's used in the culinary world."
     },
     {
-      "id": "626c170e9eb327b3296b3422",
-      "price": "$20.75",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "22",
+      "picture": "https://i.ibb.co/tcBVBfX/potato.jpg",
       "quantity": 40,
-      "name": "Mavis Daniel",
-      "supplier_name": "Melinda Manning",
-      "description": "Sit consectetur eu ad fugiat minim anim magna commodo eiusmod veniam enim et excepteur. "
-    },{
-      "id": "626d942f9c37aa1b449decfe",
-      "price": "$16.62",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "name": "Potato",
+      "supplier_name": "Monipur Arot",
+      "description": "The potato is a starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas. The plant is a perennial in the nightshade family Solanaceae.potato is a nightshade in the genus Solanum, and the vegetative and fruiting parts of the potato contain the toxin solanine which is dangerous for human consumption."
+    },
+    {
+      "price": "60",
+      "picture": "https://i.ibb.co/PY1bcy5/mango-1.jpg",
       "quantity": 37,
-      "name": "Robert Brady",
-      "supplier_name": "Boyle Morris",
-      "description": "Irure in et quis enim amet in consectetur do magna ea velit exercitation veniam et. Dolore aliqua nisi velit amet. Nulla duis deserunt elit ea veniam laborum dolor consectetur ."
+      "name": "Mango",
+      "supplier_name": "Monipur Arot",
+      "description": "A mango is an edible stone fruit produced by the tropical tree Mangifera indica which is believed to have originated from the region between northwestern Myanmar, Bangladesh, and northeastern India."
     },
     {
-      "id": "626d942fc7f0f036ab74c974",
-      "price": "$14.29",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "65",
+      "picture": "https://i.ibb.co/SXXqJ13/grapes.jpg",
       "quantity": 33,
-      "name": "Robin Obrien",
-      "supplier_name": "Moss Strickland",
-      "description": "Excepteur aliquip occaecat duis id adipisicing esse eiusmod aute. Et nulla voluptate aliquip et ipsum commodo aliqua veniam deserunt et officia "
+      "name": "Grapes",
+      "supplier_name": "Mosco Home",
+      "description": "Grapes are versatile fruits used in a wide range of popular foods and drinks — from raisins and jelly to wine. They are also packed with nutrients and antioxidants, and have high amounts of the phytonutrient resveratrol, which is good for the heart, according to the New York Academy of Sciences. In fact, while grapes are good for your overall health, they are especially lauded for their heart benefits."
     },
     {
-      "id": "626d942f4ba4213d32edcc9f",
-      "price": "$23.88",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "40",
+      "picture": "https://i.ibb.co/qBsYT8K/happy-surani-2-n-A5-Kas-Eo-E-unsplash.jpg",
       "quantity": 23,
-      "name": "Harper Ortiz",
-      "supplier_name": "Jones Fischer",
-      "description": "Cupidatat consequat ex velit irure ea. Sunt minim magna adipisicing tempor sunt adipisicing. Labore labore adipisicing mollit ipsum velit ad dolore sunt in dolore esse eiusmod amet ex.\r\n"
+      "name": "Papaya",
+      "supplier_name": "Rajib Enterprise",
+      "description": "The papaya, papaw, or pawpaw is the plant Carica papaya, one of the 22 accepted species in the genus Carica of the family Caricaceae. It was first domesticated in Mesoamerica, within modern-day southern Mexico and Central America."
     },
     {
-      "id": "626d942fb7e66a8284445517",
-      "price": "$25.81",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "30",
+      "picture": "https://i.ibb.co/5xzPLSr/mike-kenneally-muv4-YPu4-Og4-unsplash.jpg",
       "quantity": 18,
-      "name": "Mcdonald Gardner",
-      "supplier_name": "Howe Hogan",
-      "description": "Anim consequat consectetur tempor ullamco. Ad duis ipsum adipisicing irure sunt excepteur cillum. Nostrud deserunt aute esse in commodo ad. Elit consectetur mollit "
+      "name": "Garlic",
+      "supplier_name": "Rahim Store",
+      "description": "Garlic is a species of bulbous flowering plant in the genus Allium. Its close relatives include the onion, shallot, leek, chive, Welsh onion and Chinese onion.Garlic belongs to the genus Allium and is closely related to the onion, rakkyo (an onion found in Asia), scallion, chive, leek, and shallot."
     },
     {
-      "id": "626d942fdcba684625298f60",
-      "price": "$28.89",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
-      "quantity": 39,
-      "name": "Lorie Hancock",
-      "supplier_name": "Berg Gilliam",
-      "description": "Est esse cupidatat sunt non est Lorem. Velit eu dolore eu consequat irure Lorem. Nisi minim minim commodo mollit laboris proident esse et Lorem magna. Consectetur tempor aliqua veniam labore fugiat."
-    },
-    {
-      "id": "626d942f0592eaec15f8a224",
-      "price": "$23.99",
-      "picture": "https://i.ibb.co/pbGPzKM/apple.jpg",
+      "price": "25",
+      "picture": "https://i.ibb.co/YpsH21B/mockup-graphics-b-C1f-XU1v98-U-unsplash.jpg",
       "quantity": 32,
-      "name": "Elva Howe",
-      "supplier_name": "Ramona Lyons",
-      "description": "Fugiat ad occaecat sit amet officia consequat sint aute qui amet. Esse aliqua ad nulla et sunt minim deserunt nostrud labore et ad ut aliquip. Tempor velit consectetur et sunt."
+      "name": "Onion",
+      "supplier_name": "Mosco Home",
+      "description": "The onion, also known as the bulb onion or common onion, is a vegetable that is the most widely cultivated species of the genus Allium. The shallot is a botanical variety of the onion which was classified as a separate species until 2010. Its close relatives include garlic, scallion, leek, and chive."
+    },
+    {
+      "price": "80",
+      "picture": "https://i.ibb.co/MZfnLrv/mockup-graphics-q-Nlw-GPx-Md9-Q-unsplash.jpg",
+      "quantity": 32,
+      "name": "Pomegranates",
+      "supplier_name": "Rajib Enterprise",
+      "description": "The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall. The pomegranate was originally described throughout the Mediterranean region."
+    },
+    {
+      "price": "35",
+      "picture": "https://i.ibb.co/SxRkbc1/cauliflower.jpg",
+      "quantity": 40,
+      "name": "Cauliflower",
+      "supplier_name": "Sweet Store",
+      "description": "Cauliflower is one of several vegetables in the species Brassica oleracea in the genus Brassica, which is in the Brassicaceae family. It is an annual plant that reproduces by seed. Typically, only the head is eaten – the edible white flesh sometimes called 'crud'."
+    },
+    {
+      "price": "110",
+      "picture": "https://i.ibb.co/Kxd7D7v/dragon-food.jpg",
+      "quantity": 28,
+      "name": "Dragon Food(Pitaya)",
+      "supplier_name": "Sweet Home",
+      "description": "A pitaya or pitahaya is the fruit of several different cactus species indigenous to the Americas. Pitaya usually refers to fruit of the genus Stenocereus, while pitahaya or dragon fruit refers to fruit of the genus Selenicereus, both in the family Cactaceae."
+    },
+    {
+      "price": "23",
+      "picture": "https://i.ibb.co/JxVL84b/chilli.jpg",
+      "quantity": 15,
+      "name": "Chilli",
+      "supplier_name": "Monipur arot",
+      "description": "Green chillies contain fewer calories, speed up your metabolism and help maintain a healthy digestive system. The antioxidants and vitamins in green chilli also provide multiple health benefits. They protect your body against free radicals and strengthen your immune system."
+    },
+    {
+      "price": "30",
+      "picture": "https://i.ibb.co/WnTJQwj/melon.png",
+      "quantity": 22,
+      "name": "Melon",
+      "supplier_name": "Rahim Store",
+      "description": "The cantaloupe, rockmelon, sweet melon, or spanspek is a melon that is a variety of the muskmelon species from the family Cucurbitaceae. Cantaloupes range in weight from 0.5 to 5 kilograms."
+    },
+    {
+      "price": "85",
+      "picture": "https://i.ibb.co/nkw10L3/strawberry.png",
+      "quantity": 20,
+      "name": "Strawberry",
+      "supplier_name": "Rahim Store",
+      "description": "The strawberry is a highly nutritious fruit, loaded with vitamin C and powerful antioxidants. Studies show that strawberries have many benefits for health.Packed with vitamins, fiber, and particularly high levels of antioxidants known as polyphenols, strawberries are a sodium-free, fat-free, cholesterol-free, low-calorie food."
+    },
+    {
+      "price": "15",
+      "picture": "https://i.ibb.co/wcyjZ1L/jamie-coupaud-r-BIk-X6-OJ-Fc-unsplash.jpg",
+      "quantity": 25,
+      "name": "Tomato",
+      "supplier_name": "Sweet Home",
+      "description": "The tomato is the edible berry of the plant Solanum lycopersicum, commonly known as the tomato plant. The species originated in western South America and Central America. The Mexican Nahuatl word tomatl gave rise to the Spanish word tomate, from which the English word tomato derived."
+    },
+    {
+      "price": "38",
+      "picture": "https://i.ibb.co/WxQ8W6L/moritz-nie-7-WAGthf-GJ9w-unsplash.jpg",
+      "quantity": 28,
+      "name": "Lemon",
+      "supplier_name": "Rahim Store",
+      "description": "What are the health benefits of lemon?Image result for lemonLemons contain a high amount of vitamin C, soluble fiber, and plant compounds that give them a number of health benefits. Lemons may aid weight loss and reduce your risk of heart disease, anemia, kidney stones, digestive issues, and cancer."
+    },
+    {
+      "price": "50",
+      "picture": "https://i.ibb.co/vVr5fbp/watermalon.jpg",
+      "quantity": 20,
+      "name": "Watermelon",
+      "supplier_name": "Rahim Store",
+      "description": "Watermelon is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit. A scrambling and trailing vine-like plant, it is a highly cultivated fruit worldwide, with more than 1,000 varieties."
+    },
+    {
+      "price": "40",
+      "picture": "https://i.ibb.co/68krkJj/kiwi.jpg",
+      "quantity": 35,
+      "name": "Kiwi",
+      "supplier_name": "Monipur Arot",
+      "description": "Kiwifruit or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia. The most common cultivar group of kiwifruit is oval, about the size of a large hen's egg: 5-8 centimetres in length and 4.5-5.5 cm in diameter."
+    },
+    {
+      "price": "34",
+      "picture": "https://i.ibb.co/jRXcnmR/corn-1.jpg",
+      "quantity": 22,
+      "name": "Corn",
+      "supplier_name": "Rajib Enterprise",
+      "description": "Maize, also known as corn, is a cereal grain first domesticated by indigenous peoples in southern Mexico about 10,000 years ago. The leafy stalk of the plant produces pollen inflorescences and separate ovuliferous inflorescences called ears that when fertilized yield kernels or seeds, which are fruits."
     }
   ]

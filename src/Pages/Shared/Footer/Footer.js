@@ -12,13 +12,11 @@ const Footer = () => {
               FRUIT & <br /> VEGETABLE STOCK
             </h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam
-              suscipit quasi, accusantium maiores consectetur perspiciatis
-              facilis optio.{" "}
-            </p>
-            <p>
-              temporibus unde tempora possimus ipsum aspernatur eligendi, quidem
-              id. A architecto corrupti facilis.
+              Fruit and vegetables should be an important part of your daily
+              diet. They are naturally good and contain vitamins and minerals
+              that can help to keep you healthy. They can also help protect
+              against some diseases.Fruits and vegetables contain many vitamins
+              and minerals that are good for your health.
             </p>
           </div>
           <div className="footer-item-two">

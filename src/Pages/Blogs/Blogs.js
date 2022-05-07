@@ -5,7 +5,9 @@ import "./Blogs.css";
 const Blogs = () => {
   return (
     <div className="questions-accordion">
-        <h1 className="text-center mb-5 text-success">Frequently Asked Questions</h1>
+      <h1 className="text-center mb-5 text-success">
+        Frequently Asked Questions
+      </h1>
       <Accordion>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
@@ -88,28 +90,28 @@ const Blogs = () => {
             Difference between sql and nosql database
           </Accordion.Header>
           <Accordion.Body>
-          <div className="d-flex justify-content-center align-items-center bg-light p-3">
+            <div className="d-flex justify-content-center align-items-center bg-light p-3">
               <div className="js">
                 <h5 className="text-center">SQL</h5>
+                <p>i)RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS).</p>
                 <p>
-                  i)RELATIONAL DATABASE MANAGEMENT SYSTEM (RDBMS).
-                </p>
-                <p>ii)These databases have fixed or static or predefined schema.</p>
-                <p>ii)These databases are not suited for hierarchical data storage.</p>
-                <p>
-                  iv)These databases are best suited for complex queries.
+                  ii)These databases have fixed or static or predefined schema.
                 </p>
                 <p>
-                  v)Vertically Scalable.
+                  ii)These databases are not suited for hierarchical data
+                  storage.
                 </p>
+                <p>iv)These databases are best suited for complex queries.</p>
+                <p>v)Vertically Scalable.</p>
               </div>
               <div className="nodejs">
                 <h5 className="text-center">NoSQL</h5>
                 <p>i)Non-relational or distributed database system.</p>
+                <p>ii)They have dynamic schema.</p>
                 <p>
-                  ii)They have dynamic schema.
+                  iii)These databases are best suited for hierarchical data
+                  storage.
                 </p>
-                <p>iii)These databases are best suited for hierarchical data storage.</p>
                 <p>iv)These databases are not so good for complex queries.</p>
                 <p>v)Horizontally scalable.</p>
               </div>

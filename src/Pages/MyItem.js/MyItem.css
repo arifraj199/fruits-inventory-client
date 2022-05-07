@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 25px;
-    padding: 60px;
+    padding: 0 60px;
 }
 .my-item-card{
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;

@@ -4,65 +4,63 @@ import "./Inventory.css";
 
 const Inventory = () => {
   const { id } = useParams();
-  const [product,setProduct] = useState({});
+  const [product, setProduct] = useState({});
   const restockRef = useRef(0);
 
-  useEffect( ()=>{
+  useEffect(() => {
     const url = `https://fast-sierra-89206.herokuapp.com/inventory/${id}`;
     fetch(url)
-    .then(res=>res.json())
-    .then(data=>{
-      setProduct(data);
+      .then((res) => res.json())
+      .then((data) => {
+        setProduct(data);
+      });
+  }, [id]);
+
+  const handleDeliver = (id) => {
+    if (product.quantity > 0) {
+      const { quantity, ...rest } = product;
+      const newQuantity = parseInt(quantity) - 1;
+      const newItem = { quantity: newQuantity, ...rest };
+      setProduct(newItem);
+
+      //send data to the server
+      fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`, {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(newItem),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          console.log(data);
+        });
+    } else {
+    }
+  };
+
+  const handleRestockButton = () => {
+    const restockQuantity = restockRef.current.value;
+    const { quantity, ...rest } = product;
+    const newQuantity = parseInt(quantity) + parseInt(restockQuantity);
+    const newItem = { quantity: newQuantity, ...rest };
+    setProduct(newItem);
+
+    //send data to the server
+    fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newItem),
     })
-  },[id]);
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
 
-    const handleDeliver = id => {
-        if(product.quantity > 0){
-          const {quantity,...rest} = product;
-          const newQuantity = parseInt(quantity) - 1;
-          const newItem = {quantity:newQuantity,...rest};
-          setProduct(newItem);
-
-
-            //send data to the server
-          fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
-          method:"PUT",
-          headers:{
-              "content-type":"application/json"
-          },
-          body:JSON.stringify(newItem)
-          })
-          .then(res=>res.json())
-          .then(data=>{
-              console.log(data);
-          })
-
-        }else{}
-    }
-
-    const handleRestockButton = () =>{
-        const restockQuantity = restockRef.current.value;
-        const {quantity,...rest} = product;
-        const newQuantity = parseInt(quantity) + parseInt(restockQuantity);
-        const newItem = {quantity:newQuantity,...rest};
-        setProduct(newItem);
-
-
-        //send data to the server
-        fetch(`https://fast-sierra-89206.herokuapp.com/inventory/${id}`,{
-            method:"PUT",
-            headers:{
-                "content-type":"application/json"
-            },
-            body:JSON.stringify(newItem)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data);
-        })
-
-        restockRef.current.value = "";
-    }
+    restockRef.current.value = "";
+  };
 
   return (
     <div className="inventory-product-container">
@@ -71,52 +69,76 @@ const Inventory = () => {
           <img src={product.picture} alt="" />
         </div>
         <div className="product-detail">
-          <h1 className="mb-3">
-            {product.name}
-          </h1>
+          <h1 className="mb-3">{product.name}</h1>
 
           <h4>
-            <span className="text-success text-decoration-underline fw-bold">{product.price}</span>
+            <span className="text-success text-decoration-underline fw-bold">
+              {product.price}tk (per kg)
+            </span>
           </h4>
           <hr />
           <div className="mt-2 mb-4">
             <p>
-              <small className="fw-bold">
-                Quick Overview
-              </small>
+              <small className="fw-bold">Quick Overview</small>
             </p>
             <p>
-              <small>
-                {product.description}
-              </small>
-            </p> 
+              <small>{product.description}</small>
+            </p>
           </div>
           <p>
-            <span className="fw-bold">Quantity :</span> <input className="border border-0 bg-light" type="text"  value={product.quantity} readOnly/>
+            <span className="fw-bold">Quantity :</span>{" "}
+            <input
+              className="border border-0 bg-light"
+              type="text"
+              value={product.quantity}
+              readOnly
+            />
+            <small> (kg)</small>
           </p>
 
           <p>
             <small>
-              <span className="fw-bold">Supplier Name: </span>{product.supplier_name}
+              <span className="fw-bold">Supplier Name: </span>
+              {product.supplier_name}
             </small>
           </p>
-          
-          <p><small><span className="fw-bold">Stock : </span>{product.quantity <= 0 ? <span className="fw-bold text-danger">Stock Out</span> :<span >Available</span>}</small></p>
-          
+
+          <p>
+            <small>
+              <span className="fw-bold">Stock : </span>
+              {product.quantity <= 0 ? (
+                <span className="fw-bold text-danger">Stock Out</span>
+              ) : (
+                <span>Available</span>
+              )}
+            </small>
+          </p>
+
           <div className="button-field">
-            <button onClick={handleDeliver} className="btn ">Delivered</button>
+            <button onClick={handleDeliver} className="btn ">
+              Delivered
+            </button>
             <div className="d-flex">
-              <input className="border border-1 bg-light" ref={restockRef} type="number" name="restockNumber" placeholder="restoke item"  />
-              <button onClick={handleRestockButton} className="btn ms-1 "> Restock</button>
+              <input
+                className="border border-1 bg-light"
+                ref={restockRef}
+                type="number"
+                name="restockNumber"
+                placeholder="restoke item"
+              />
+              <button onClick={handleRestockButton} className="btn ms-1 ">
+                {" "}
+                Restock
+              </button>
             </div>
           </div>
-          
         </div>
-        
       </div>
-      
+
       <div className="manage-item-inventory text-end">
-        <Link to='/manageitem'><button className="btn btn-success ">Manage Inventories</button></Link>
+        <Link to="/manageitem">
+          <button className="btn btn-success ">Manage Inventories</button>
+        </Link>
       </div>
     </div>
   );
