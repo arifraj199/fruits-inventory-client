@@ -26,6 +26,9 @@
     .login .login-button{
         width: 25%;
     }
+    .login,.signout{
+        margin-top: 5px;
+    }
 }
 
 
