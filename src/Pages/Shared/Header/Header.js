@@ -12,6 +12,7 @@ const Header = () => {
 
   const handleSignout = () => {
     signOut(auth);
+    // window.location.reload();
   };
 
   return (
@@ -23,7 +24,7 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto fw-bold">
+          <Nav className="ms-auto fw-bold navbar-custom-link  mb-1">
             <CustomLink to="/home">Home</CustomLink>
             <CustomLink to="/blogs">Blogs</CustomLink>
             {user ? (
@@ -32,20 +33,21 @@ const Header = () => {
                 <CustomLink to="/additem">Add Item</CustomLink>
                 <CustomLink to="/myitem">My Item</CustomLink>
                 <div className="signout">
-                  <button
+                  <CustomLink
+                    to="/login"
                     onClick={handleSignout}
-                    className="btn btn-link text-decoration-none text-white text-start signout"
+                    className="btn btn-link text-decoration-none text-white text-start signout "
                   >
                     Sign Out
-                  </button>
+                  </CustomLink>
                 </div>
               </>
             ) : (
-              <div className="login">
+              <div className="login mt-2">
                 <Nav.Link
                   as={Link}
                   to="/login"
-                  className="login-button text-white"
+                  className=" login-button text-white w-100"
                 >
                   Login
                 </Nav.Link>

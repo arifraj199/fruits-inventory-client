@@ -26,6 +26,7 @@ const Login = () => {
   const navigate = useNavigate();
   let errorElement;
   const emailRef = useRef("");
+  const passwordRef = useRef("");
 
   const from = location.state?.from?.pathname || "/";
 
@@ -42,17 +43,13 @@ const Login = () => {
   }
 
   if (user || user1) {
-    // console.log(user);
     navigate(from, { replace: true });
-    //
   }
 
   const handleLoginForm = async (event) => {
     event.preventDefault();
-    const email = event.target.email.value;
-    const password = event.target.password.value;
-
-    console.log(email, password);
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
 
     await signInWithEmailAndPassword(email, password);
     const { data } = await axios.post(
@@ -62,6 +59,18 @@ const Login = () => {
     console.log(data);
     localStorage.setItem("accessToken", data.accessToken);
   };
+
+  if (user1) {
+    const email = user1.user.email;
+    const googleToken = async () => {
+      const { data } = await axios.post(
+        "https://fast-sierra-89206.herokuapp.com/login",
+        { email }
+      );
+      localStorage.setItem("accessToken", data.accessToken);
+    };
+    googleToken();
+  }
 
   const handleReset = async () => {
     const email = emailRef.current.value;
@@ -99,6 +108,7 @@ const Login = () => {
             <Form.Control
               className="login-form-input"
               type="password"
+              ref={passwordRef}
               name="password"
               placeholder="password"
               required

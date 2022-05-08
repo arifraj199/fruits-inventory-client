@@ -7,10 +7,8 @@ import "./AddInventory.css";
 
 const AddInventory = () => {
   const [user] = useAuthState(auth);
-  console.log(user);
   const { register, handleSubmit } = useForm();
   const onSubmit = (data, event) => {
-    console.log(data);
 
     //send data to the server
     const url = `https://fast-sierra-89206.herokuapp.com/inventory`;

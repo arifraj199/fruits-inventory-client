@@ -2,7 +2,7 @@
     background-color: aqua!important;
 }
 
-.login .login-button,.signout button{
+.login .login-button{
     background-color: black;
     color: white;
     border: 2px solid orange;
@@ -12,9 +12,24 @@
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
 }
-.login .login-button:hover,.signout button:hover{
+.login .login-button:hover,.signout a:hover{
     background-color: rgb(160, 48, 7);
     border: 2px solid rgb(160, 48, 7);
+}
+.navbar-custom-link{
+    align-items: center;
+}
+.signout a{
+    background-color: black;
+    color: white;
+    border: 2px solid orange;
+    border-radius: 25px;
+    transition: 0.5s all ease;
+    padding: 8px 12px;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
 }
 
 .login .login-button{
@@ -26,8 +41,11 @@
     .login .login-button{
         width: 25%;
     }
-    .login,.signout{
+    .login,.signout a{
         margin-top: 5px;
+    }
+    .navbar-custom-link{
+        align-items: start;
     }
 }
 
